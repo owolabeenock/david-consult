@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>ep</title>
+<style type="text/css">
+    div{
+   position:relative;
+   background:black;
+   width:100%;
+   height:250px;
+   margin:auto;
+}
+    img{
+   width:100%;
+   height:100%;
+}
+.pose{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width:20%;
+    height:13px;
+    background:none
+}
+.change 
+
+    button{
+    border:1px solid grey; 
+    border-radius:50%;
+    width:10px;
+    height:13px;
+    background-color:white
+}
+     button:hover{
+    background-color:orange
+}
+     button:active{
+    background-color:orange
+}
+   
+</style>
+</head>
+<body>
+   <div>
+       <img src="images/Consult.jpg" id="change">
+   <div class="pose">
+      <button onclick="myFunc()" id="1"></button>
+      <button onclick="myFunc1()" id="1"></button>
+      <button onclick="myFunc2()" id="1"></button>
+   </div>
+   </div> 
+
+  <script>
+       var images =["images/Consult.jpg","images/Consultancy.jpeg","images/Conzult.jpeg"]  
+
+       function myFunc(){
+       document.getElementById("change").src=images[0]
+}
+       function myFunc1(){
+       document.getElementById("change").src=images[1] 
+}
+       function myFunc2(){
+       document.getElementById("change").src=images[2] 
+}
+  </script>
+</body>
+</html>

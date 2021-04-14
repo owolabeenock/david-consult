@@ -1,0 +1,103 @@
+html, body{
+  padding:0;
+  margin:0
+}
+p{
+  font-size:20px;
+  font-family:sans-serif
+}
+Div{
+  padding:50px 10%;
+}
+.inside{
+  background:rgba(0,0,0,.6); 
+}
+button{
+  background:#3c3c3c;
+  color:white;
+  border-radius:5px;
+  height:40px; 
+  border:none;
+  padding:0 10px;
+  box-shadow:0 0 10px white
+}
+h1{
+   font-size:48px;
+}
+h2{
+   text-align:center;
+   font-size:36px
+}
+.hero{
+    background-image:url(images/Consultants.jpg);
+    background-size:cover;
+    color:white;
+}
+.hero > .inside > p{
+    width:33.3%;
+    min-width:250px;
+}
+form > input{
+   height:36px;
+   padding-left:10px;
+   font-size:18px;
+}
+video{
+   float:right;
+   width:300px;
+   margin-top:10px;
+  
+}
+.backimg{
+    background:url(images/Consultancy.jpeg);
+    background-size:cover;
+    display:block;
+    color:white
+}
+.hero,.backimg{
+    padding:0
+}
+.backimg, .clearfix,.hero, .inside{
+    overflow:auto;
+}
+.float{
+   float:right;
+}
+li{
+   width:30%;
+   min-width:200px;
+   float:left;
+   list-style-type:none;
+   text-align:center;
+   padding:10px;
+}
+#slider{
+         overflow:hidden;
+}
+     #slider figure{
+         position:relative;
+         width:300%;
+         margin:0;
+         left:0;
+         animation: 15s slider infinite
+}
+     @keyframes slider{
+          0%{
+           left:0%
+}
+          33.3%{
+           left:0%
+}
+          36.3%{
+           left:-100%
+}
+          69.3%{
+           left:-100%
+}
+          71.3%{
+           left:-200%
+}
+          100%{
+            left:-200%
+}
+}

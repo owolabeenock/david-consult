@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>slider</title>
+   <style type="text/css">
+     body{
+          margin:0;
+          padding:0;
+          background:blue
+}
+     .slideshow{
+          margin:auto;
+          width:80%;
+          height:auto;
+          overflow:hidden;
+          border:10px solid black;
+}
+     #slide{ 
+         display:flex;
+         width:100%;
+         height:300px
+}
+     .slideimg{
+         width:100%
+}
+   </style>
+</head>
+<body>
+    <div class="slideshow">
+      <div id="slide">
+         <img class="slideimg" src="images/Consultancy.jpeg" />
+         <img class="slideimg" src="images/Conzult.jpeg" />
+         <img class="slideimg" src="images/Consult.jpg" />
+         <img class="slideimg" src="images/Consultants.jpg" />
+         <img class="slideimg" src="images/Consultancy.jpeg" />
+      </div>
+    </div>
+    <button id="prevBtn" >Prev</button>
+    <button id="nextBtn" type="submit">Next</button>
+    <script>
+       const slide = document.getElementById("slide");
+             prevBtn = document.getElementById("prevBtn");
+             nextBtn = document.getElementById("nextBtn");
+             imagesize = document.getElementsByClassName("slideimg")[0].clientWidth; 
+       let counter = 1;
+              
+
+             nextBtn.addEventListener("click", function(){
+                 if(counter <= 4){
+               slide.style.transition ="transform 0.4s ease-in-out";
+               slide.style.transform ="translateX(" + (-imagesize * counter) + "px)";
+               counter++;
+}
+})
+            prevBtn.addEventListener("click", function(){
+               if(counter => 0){
+               counter--; 
+               slide.style.transition ="transform 0.4s ease-in-out";
+               slide.style.transform ="translateX(" + (-imagesize * counter) + "px)";
+      
+}                
+});
+    </script>
+</body>
+</html>

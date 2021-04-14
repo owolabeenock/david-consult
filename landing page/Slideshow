@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Slideshow</title>
+   <style type="text/css">
+body{
+     margin:0;
+     padding:0;
+     background:#34495e
+}
+.slideshow{
+     width:90%;
+     height:300px;
+     overflow:hidden;
+}
+.middle{
+     position:absolute;
+     top:50%;
+     left:50%;
+     transform:translate(-50%,-50%)
+}
+.navigator{
+     position:absolute;
+     bottom:20px;
+     left:50%;
+     transform:translateX(-50%);
+     display:flex;
+}
+.bar{
+     width:40px;
+     height:20px;
+     border:2px solid white;
+     margin:3px;
+     transition:0.5s
+}
+.bar:hover{
+     background:white
+}
+input[name="r"]{
+     position:absolute;
+     visibility:hidden
+}
+.slides{
+     width:500%;
+     height:100%;
+     display:flex;
+}
+.slide{
+     width:20%;
+     transition:0.5s;
+}           
+.slide img{
+     width:100%;
+     height:100%;
+}
+#r1:checked~ .s1{
+     margin-left:0
+}
+#r2:checked ~ .s1{
+     margin-left:-20%
+}
+#r3:checked ~ .s1{
+     margin-left:-40%
+}
+#r4:checked ~ .s1{
+     margin-left:-60%
+}
+#r5 ~ .s1{
+     margin-left:-80%
+}
+
+   </style>
+</head>
+<body>
+     <div class="slideshow middle">
+          <div class="slides">
+            <input type="radio" name="r" id="r1" checked>
+            <input type="radio" name="r" id="r2">
+            <input type="radio" name="r" id="r3">
+            <input type="radio" name="r" id="r4">
+            <input type="radio" name="r" id="r5">
+               <div class="slide s1">
+                   <img src="images/Consultancy.jpeg" alt="">
+               </div>
+               <div class="slide">
+                   <img src="images/Conzult.jpeg" alt="">
+               </div>
+               <div class="slide">
+                   <img src="images/Consult.jpg" alt="">
+               </div>
+               <div class="slide">
+                   <img src="images/Consultants.jpg" alt="">
+               </div>
+               <div class="slide">
+                   <img src="images/Rectangle 5 (1).png" alt="">
+               </div>
+          </div>
+          <div class="navigator">
+               <label for="r1" class="bar"></label>
+               <label for="r2" class="bar"></label>
+               <label for="r3" class="bar"></label>
+               <label for="r4" class="bar"></label>
+               <label for="r5" class="bar"></label>
+          </div>
+     </div>
+
+</body>
+</html>

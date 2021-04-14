@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Js ex</title>
+   <style type="text/css">
+    body{
+    background:#c4c4c4; 
+}
+    .holder{
+      position:relative;
+      background-image: url(images/Conzult.jpeg);
+      background-size:cover;
+      width:50%;
+      height:200px;
+      border:2px solid black; 
+      left:50%;
+      top:50px;
+      transform:translateX(-50%);
+} 
+     .inner{
+      position:absolute;
+      top:158px;
+      background:white;
+      margin-bottom:50px;
+      width:100%;
+      height:40px;
+      border:1px solid black;
+      text-align:center;
+      opacity:0;
+      transition:0.4s
+}
+     .holder:hover > .inner{
+      opacity:1
+}
+   </style>
+</head>
+<body>
+   <div class="holder">
+    <div class="inner">
+       <p>This is a blog post</p>
+    </div>
+   </div>
+   
+
+    <div class="container">
+     <form>
+      <label for="country">Check your country</label>
+      <input type="text" name="country" id="country">
+     </form>
+    
+      <ul id="list"></ul>
+     </div>
+
+  <script>
+   var countryList= [Nigeria, Niger, Togo, Moscow, Morocco],
+       textbox= document.getElementById("country"),
+       theList= document.getElementById("list");
+    
+      textbox. focus();
+      textbox.addEventListener("keyup",function(event){
+    this. matches().display=countryList
+})
+  </script>
+</body>
+</html>

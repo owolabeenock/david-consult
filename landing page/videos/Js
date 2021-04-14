@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>hgdfy</title>
+</head>
+<body>
+ <div class="container">
+  <form>
+   <label for="searchresults">Search here:</label>
+   <input type="text" id="search" name="searchresults" placeholder="search" />
+  <form>
+    
+    <ul id="autocomplete"></ul>
+  </div>
+
+  <script type="text/javascript">
+
+    var textbox= document.getElementById("search"),
+        autocomplete= document.getElementById("autocomplete"),
+        country= [Nigeria, Ghana, Togo, Chad];
+
+            textbox.focus();
+ 
+  </script>
+</body>
+</html>
